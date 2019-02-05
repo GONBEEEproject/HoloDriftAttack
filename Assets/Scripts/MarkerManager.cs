@@ -49,6 +49,9 @@ public class MarkerManager : MonoBehaviour
 
     public void MarkerTouched(Node node)
     {
+        if (GazeGestureManager.Instance.state != GazeGestureManager.NowState.TimeAttack) return;
+
+
         if (nodes[0] == node)
         {
             nodes.Remove(node);
@@ -59,6 +62,8 @@ public class MarkerManager : MonoBehaviour
 
     public void FlagTouched()
     {
+        if (GazeGestureManager.Instance.state != GazeGestureManager.NowState.TimeAttack) return;
+
         if (nodes.Count == 0)
         {
             isAttack = false;

@@ -77,7 +77,7 @@ public class GazeGestureManager : MonoBehaviour
         {
             case NowState.Start:
 
-                FlagHolder = Instantiate(StartFlag, info.point + new Vector3(0, 1.0f, 0), Quaternion.identity);
+                FlagHolder = Instantiate(StartFlag, info.point + new Vector3(0, 0.5f, 0), Quaternion.identity);
                 state = NowState.Marker;
 
                 MarkerManager.Instance.StartMarker(FlagHolder);
@@ -96,7 +96,7 @@ public class GazeGestureManager : MonoBehaviour
                 }
                 else
                 {
-                    GameObject tmp = Instantiate(Marker, info.point + new Vector3(0, 1.0f, 0), Quaternion.identity);
+                    GameObject tmp = Instantiate(Marker, info.point + new Vector3(0, 0.5f, 0), Quaternion.identity);
 
                     MarkerManager.Instance.SetNewMarker(tmp.GetComponent<Node>());
 
