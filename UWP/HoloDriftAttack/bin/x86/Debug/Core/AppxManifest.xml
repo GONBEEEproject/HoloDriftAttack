@@ -38,6 +38,15 @@
   </Applications>
   <Capabilities>
     <uap2:Capability Name="spatialPerception" />
+    <DeviceCapability Name="humaninterfacedevice">
+      <Device Id="any">
+        <Function Type="usage:0001 0004" />
+      </Device>
+      <Device Id="any">
+        <Function Type="usage:0001 0005" />
+      </Device>
+    </DeviceCapability>
+    <DeviceCapability Name="bluetooth" />
   </Capabilities>
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">

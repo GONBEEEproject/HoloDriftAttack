@@ -49,30 +49,32 @@ public class MarkerManager : MonoBehaviour
 
     public void MarkerTouched(Node node)
     {
-        if (GazeGestureManager.Instance.state != GazeGestureManager.NowState.TimeAttack) return;
-
-
-        if (nodes[0] == node)
+        if (GazeGestureManager.Instance.state == GazeGestureManager.NowState.TimeAttack && isAttack)
         {
-            nodes.Remove(node);
-            Destroy(node.gameObject);
-            source.PlayOneShot(NodeSound);
+            if (nodes[0] == node)
+            {
+                nodes.Remove(node);
+                Destroy(node.gameObject);
+                source.PlayOneShot(NodeSound);
+            }
         }
     }
 
     public void FlagTouched()
     {
-        if (GazeGestureManager.Instance.state != GazeGestureManager.NowState.TimeAttack) return;
+        if (GazeGestureManager.Instance.state == GazeGestureManager.NowState.TimeAttack)
+        {
 
-        if (nodes.Count == 0)
-        {
-            isAttack = false;
-            source.PlayOneShot(EndSound);
-        }
-        else if (isAttack == false)
-        {
-            isAttack = true;
-            source.PlayOneShot(StartSound);
+            if (nodes.Count == 0)
+            {
+                isAttack = false;
+                source.PlayOneShot(EndSound);
+            }
+            else if (isAttack == false)
+            {
+                isAttack = true;
+                source.PlayOneShot(StartSound);
+            }
         }
     }
 

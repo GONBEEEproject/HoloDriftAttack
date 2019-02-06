@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class SpeedChecker : MonoBehaviour {
 
@@ -8,8 +9,14 @@ public class SpeedChecker : MonoBehaviour {
     private float speed;
     private GameObject cam;
 
+    private float[] speedList = new float[10];
+    private int listNum = 0;
+
     [SerializeField]
     private TextMesh speedText;
+
+    
+
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +30,11 @@ public class SpeedChecker : MonoBehaviour {
 
         latest = cam.transform.position;
 
-        speedText.text = speed.ToString("#.00");
+        speedList[listNum] = speed;
+
+        listNum++;
+        listNum = listNum % speedList.Length;
+
+        speedText.text = speedList.Average().ToString("0.00");
 	}
 }

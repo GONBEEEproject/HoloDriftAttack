@@ -70,7 +70,7 @@ public class GazeGestureManager : MonoBehaviour
                 MarkerHolder = new List<GameObject>();
 
                 MarkerManager.Instance.StartMarker(FlagHolder);
-                
+
                 state = NowState.Marker;
                 break;
             case NowState.Marker:
@@ -98,14 +98,9 @@ public class GazeGestureManager : MonoBehaviour
 
                 for (int i = 0; i < MarkerHolder.Count; i++)
                 {
-                    try
-                    {
-                        Destroy(MarkerHolder[i].gameObject);
-                    }
-                    catch (Exception)
-                    {
-                        continue;
-                    }
+                    if (MarkerHolder[i] == null) continue;
+
+                    Destroy(MarkerHolder[i].gameObject);
                 }
 
                 state = NowState.Start;

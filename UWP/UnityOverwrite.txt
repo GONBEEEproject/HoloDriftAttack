@@ -10,7 +10,7 @@ project.json: 1D02BC64BAC0D041019673A1C4C51737
 HoloDriftAttack\App.cs: 9517DB0E82F3734D3EB3AF384FDA4481
 HoloDriftAttack\HoloDriftAttack.csproj: 143171474473345B27A912FC9349C015
 HoloDriftAttack\HoloDriftAttack.csproj.user: modified
-HoloDriftAttack\Package.appxmanifest: FB0DAD2973D820DF11D4533D07ABFF46
+HoloDriftAttack\Package.appxmanifest: BC06759C8954F8BB3C98F70DEC965C52
 HoloDriftAttack\project.json: 1D02BC64BAC0D041019673A1C4C51737
 HoloDriftAttack\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
 HoloDriftAttack\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
