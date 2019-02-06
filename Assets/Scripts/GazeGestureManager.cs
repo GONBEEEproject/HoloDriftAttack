@@ -2,6 +2,7 @@
 using UnityEngine.XR.WSA.Input;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class GazeGestureManager : MonoBehaviour
 {
@@ -40,20 +41,12 @@ public class GazeGestureManager : MonoBehaviour
 
 
     
-    // Use this for initialization
     void Start()
     { 
-
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
         recognizer.Tapped += (args) =>
         {
-            //// Send an OnSelect message to the focused object and its ancestors.
-            //if (FocusedObject != null)
-            //{
-            //    FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-            //}
-
             var headPosition = Camera.main.transform.position;
             var gazeDirection = Camera.main.transform.forward;
 
@@ -63,10 +56,6 @@ public class GazeGestureManager : MonoBehaviour
             {
                 Tap(info);
             }
-
-
-
-
         };
         recognizer.StartCapturingGestures();
     }
@@ -76,12 +65,13 @@ public class GazeGestureManager : MonoBehaviour
         switch (state)
         {
             case NowState.Start:
-
                 FlagHolder = Instantiate(StartFlag, info.point + new Vector3(0, 0.5f, 0), Quaternion.identity);
-                state = NowState.Marker;
+
+                MarkerHolder = new List<GameObject>();
 
                 MarkerManager.Instance.StartMarker(FlagHolder);
-
+                
+                state = NowState.Marker;
                 break;
             case NowState.Marker:
                 if (info.transform.tag == StartFlag.tag)
@@ -99,51 +89,43 @@ public class GazeGestureManager : MonoBehaviour
                     GameObject tmp = Instantiate(Marker, info.point + new Vector3(0, 0.5f, 0), Quaternion.identity);
 
                     MarkerManager.Instance.SetNewMarker(tmp.GetComponent<Node>());
-
                 }
-
 
                 break;
             case NowState.TimeAttack:
+
                 Destroy(FlagHolder);
-                for(int i = 0; i < MarkerHolder.Count; i++)
+
+                for (int i = 0; i < MarkerHolder.Count; i++)
                 {
-                    Destroy(MarkerHolder[i].gameObject);
+                    try
+                    {
+                        Destroy(MarkerHolder[i].gameObject);
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
                 }
 
                 state = NowState.Start;
-
                 break;
         }
     }
 
-
-
-
     private void Update()
     {
-
-        Vector2 touchScreenPosition = Input.mousePosition;
-
-        touchScreenPosition.x = Mathf.Clamp(touchScreenPosition.x, 0.0f, Screen.width);
-        touchScreenPosition.y = Mathf.Clamp(touchScreenPosition.y, 0.0f, Screen.height);
-
-        Camera gameCamera = Camera.main;
-        Ray touchPointToRay = gameCamera.ScreenPointToRay(touchScreenPosition);
-
-        // デバッグ機能を利用して、スクリーンビューでレイが出ているか見てみよう。
-        Debug.DrawRay(touchPointToRay.origin, touchPointToRay.direction * 1000.0f);
-
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
+            var headPosition = Camera.main.transform.position;
+            var gazeDirection = Camera.main.transform.forward;
+
             RaycastHit info;
 
-            if (Physics.Raycast(gameCamera.gameObject.transform.position, touchPointToRay.direction, out info))
+            if (Physics.Raycast(headPosition, gazeDirection, out info))
             {
                 Tap(info);
             }
         }
     }
-
-
 }
