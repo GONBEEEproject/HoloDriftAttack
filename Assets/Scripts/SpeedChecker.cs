@@ -35,6 +35,6 @@ public class SpeedChecker : MonoBehaviour {
         listNum++;
         listNum = listNum % speedList.Length;
 
-        speedText.text = speedList.Average().ToString("0.00");
+        speedText.text = ((speedList.Average()) * 3.6f).ToString("0.00") + "km/h";
 	}
 }
