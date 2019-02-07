@@ -111,6 +111,7 @@ public class GazeGestureManager : MonoBehaviour
 
     private void Update()
     {
+        //ジョイコン右Aボタン
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             var headPosition = Camera.main.transform.position;
