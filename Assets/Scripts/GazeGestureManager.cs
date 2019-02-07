@@ -89,6 +89,7 @@ public class GazeGestureManager : MonoBehaviour
                     GameObject tmp = Instantiate(Marker, info.point + new Vector3(0, 0.5f, 0), Quaternion.identity);
 
                     MarkerManager.Instance.SetNewMarker(tmp.GetComponent<Node>());
+                    MarkerHolder.Add(tmp);
                 }
 
                 break;
