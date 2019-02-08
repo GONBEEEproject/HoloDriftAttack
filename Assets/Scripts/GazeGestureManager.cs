@@ -76,7 +76,7 @@ public class GazeGestureManager : MonoBehaviour
             case NowState.Marker:
                 if (info.transform.tag == StartFlag.tag)
                 {
-                    MarkerManager.Instance.EndMarker();
+                    MarkerManager.Instance.EndMarker(FlagDistance());
 
                     state = NowState.TimeAttack;
                 }
@@ -107,6 +107,20 @@ public class GazeGestureManager : MonoBehaviour
                 state = NowState.Start;
                 break;
         }
+    }
+
+    private float FlagDistance()
+    {
+        float distance = Vector3.Distance(FlagHolder.transform.position, MarkerHolder[0].transform.position);
+
+        for(int i = 0; i < MarkerHolder.Count - 1; i++)
+        {
+            distance += Vector3.Distance(MarkerHolder[i].transform.position, MarkerHolder[i + 1].transform.position);
+        }
+
+        distance += Vector3.Distance(MarkerHolder[MarkerHolder.Count - 1].transform.position, FlagHolder.transform.position);
+
+        return distance;
     }
 
     private void Update()

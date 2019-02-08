@@ -24,6 +24,7 @@ public class MarkerManager : MonoBehaviour
     private TextMesh timeMesh;
 
     private float scoreTime;
+    private float distance = 0;
 
     private bool isAttack=false;
 
@@ -40,9 +41,10 @@ public class MarkerManager : MonoBehaviour
         if (isAttack)
         {
             scoreTime += Time.deltaTime;
-            timeMesh.text = scoreTime.ToString();
-        }
 
+            string s = scoreTime.ToString() + "sec\n" + distance.ToString("0.00") + "m";
+            timeMesh.text = s;
+        }
     }
 
 
@@ -82,6 +84,7 @@ public class MarkerManager : MonoBehaviour
     {
         nodes = new List<Node>();
         scoreTime = 0;
+        distance = 0;
 
         timeMesh = startFlag.GetComponentInChildren<TextMesh>();
         source.PlayOneShot(NodePut);
@@ -94,9 +97,13 @@ public class MarkerManager : MonoBehaviour
         source.PlayOneShot(NodePut);
     }
 
-    public void EndMarker()
+    public void EndMarker(float dist)
     {
+        distance = dist;
         source.PlayOneShot(EndSound);
+
+        string s = "Start/End\n" + distance.ToString("0.00") + "m";
+        timeMesh.text = s;
     }
 
 }
