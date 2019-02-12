@@ -94,17 +94,25 @@ public class GazeGestureManager : MonoBehaviour
 
                 break;
             case NowState.TimeAttack:
-
-                Destroy(FlagHolder);
-
-                for (int i = 0; i < MarkerHolder.Count; i++)
+                if (info.transform.tag == StartFlag.tag)
                 {
-                    if (MarkerHolder[i] == null) continue;
+                    Destroy(FlagHolder);
 
-                    Destroy(MarkerHolder[i].gameObject);
+                    MarkerManager.Instance.DestroyMarker();
+
+                    for (int i = 0; i < MarkerHolder.Count; i++)
+                    {
+                        if (MarkerHolder[i] == null) continue;
+
+                        Destroy(MarkerHolder[i].gameObject);
+                    }
+                    state = NowState.Start;
+                }
+                else
+                {
+                    MarkerManager.Instance.ResetMarker();
                 }
 
-                state = NowState.Start;
                 break;
         }
     }
@@ -125,6 +133,29 @@ public class GazeGestureManager : MonoBehaviour
 
     private void Update()
     {
+        Vector2 touchScreenPosition = Input.mousePosition;
+
+        touchScreenPosition.x = Mathf.Clamp(touchScreenPosition.x, 0.0f, Screen.width);
+        touchScreenPosition.y = Mathf.Clamp(touchScreenPosition.y, 0.0f, Screen.height);
+
+        Camera gameCamera = Camera.main;
+        Ray touchPointToRay = gameCamera.ScreenPointToRay(touchScreenPosition);
+
+        // デバッグ機能を利用して、スクリーンビューでレイが出ているか見てみよう。
+        Debug.DrawRay(touchPointToRay.origin, touchPointToRay.direction * 1000.0f);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit info;
+
+            if(Physics.Raycast(gameCamera.gameObject.transform.position,touchPointToRay.direction,out info))
+            {
+                Tap(info);
+            }
+        }
+
+
+
         //ジョイコン右Aボタン
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {

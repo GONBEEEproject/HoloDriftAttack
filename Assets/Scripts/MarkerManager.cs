@@ -31,6 +31,8 @@ public class MarkerManager : MonoBehaviour
     public AudioClip StartSound, EndSound,NodeSound,NodePut;
     private AudioSource source;
 
+    public Material touchedFlag, waitFlag;
+
     private void Start()
     {
         source = GetComponent<AudioSource>();
@@ -47,16 +49,18 @@ public class MarkerManager : MonoBehaviour
         }
     }
 
-
-
     public void MarkerTouched(Node node)
     {
         if (GazeGestureManager.Instance.state == GazeGestureManager.NowState.TimeAttack && isAttack)
         {
-            if (nodes[0] == node)
+            if (nodes.Count == flagNum) return;
+
+            if (nodes[flagNum] == node)
             {
-                nodes.Remove(node);
-                Destroy(node.gameObject);
+                flagNum++;
+
+                node.gameObject.GetComponent<MeshRenderer>().material = touchedFlag;
+
                 source.PlayOneShot(NodeSound);
             }
         }
@@ -67,7 +71,7 @@ public class MarkerManager : MonoBehaviour
         if (GazeGestureManager.Instance.state == GazeGestureManager.NowState.TimeAttack)
         {
 
-            if (nodes.Count == 0)
+            if (nodes.Count == flagNum)
             {
                 isAttack = false;
                 source.PlayOneShot(EndSound);
@@ -85,9 +89,36 @@ public class MarkerManager : MonoBehaviour
         nodes = new List<Node>();
         scoreTime = 0;
         distance = 0;
+        flagNum = 0;
+
+        isAttack = false;
 
         timeMesh = startFlag.GetComponentInChildren<TextMesh>();
         source.PlayOneShot(NodePut);
+    }
+
+    public void DestroyMarker()
+    {
+        isAttack = false;
+    }
+
+
+    public void ResetMarker()
+    {
+        scoreTime = 0;
+        flagNum = 0;
+
+        isAttack = false;
+
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].gameObject.GetComponent<MeshRenderer>().material = waitFlag;
+        }
+
+        string s = scoreTime.ToString() + "sec\n" + distance.ToString("0.00") + "m";
+        timeMesh.text = s;
+
+        source.PlayOneShot(EndSound);
     }
 
     public void SetNewMarker(Node newNode)
@@ -105,5 +136,4 @@ public class MarkerManager : MonoBehaviour
         string s = "Start/End\n" + distance.ToString("0.00") + "m";
         timeMesh.text = s;
     }
-
 }

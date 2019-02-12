@@ -362,59 +362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c41289a91723548bd542e9cc685fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1198991778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1198991781}
-  - component: {fileID: 1198991780}
-  - component: {fileID: 1198991779}
-  m_Layer: 0
-  m_Name: uOSC Server
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1198991779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1198991778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7ac9cb3a9944ac584257dc6ef622f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1198991780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1198991778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed41645692348410d84991648165334c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  port: 3333
---- !u!4 &1198991781
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1198991778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666350121
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +626,8 @@ MonoBehaviour:
   EndSound: {fileID: 8300000, guid: 8e65308c3e8f68349b72356227b31f8e, type: 3}
   NodeSound: {fileID: 8300000, guid: 32c5554b76be7094ca34a23853737936, type: 3}
   NodePut: {fileID: 8300000, guid: 32c5554b76be7094ca34a23853737936, type: 3}
+  touchedFlag: {fileID: 2100000, guid: 1ac328d0958cfdc45ab2f152120bf2d1, type: 2}
+  waitFlag: {fileID: 2100000, guid: f102f64805f976945b3c1a85dfbde062, type: 2}
 --- !u!114 &1739073550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawMaterial: {fileID: 2100000, guid: 4b0f3315a044218428165ca0893aa0b5, type: 2}
-  drawVisualMeshes: 0
+  drawVisualMeshes: 1
 --- !u!4 &1797450232
 Transform:
   m_ObjectHideFlags: 0
