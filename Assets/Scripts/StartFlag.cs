@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class StartFlag : MonoBehaviour {
 
+    public TextMesh timeMesh;
+
+    public TextMesh[] rankingMesh;
 
     private void OnTriggerEnter(Collider other)
     {
