@@ -113,6 +113,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &87344075
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318174882938662, guid: 505a106e404dca64a9eb4b3b041ddf54,
+        type: 2}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318174882938662, guid: 505a106e404dca64a9eb4b3b041ddf54,
+        type: 2}
+      propertyPath: instantiationId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302259032185836, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+      propertyPath: m_TagString
+      value: StateSphere
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &371792846
 GameObject:
   m_ObjectHideFlags: 0

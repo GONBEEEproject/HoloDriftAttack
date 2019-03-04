@@ -6,6 +6,9 @@ TagManager:
   tags:
   - StartFlag
   - Node
+  - Bullet
+  - Beam
+  - StateSphere
   layers:
   - Default
   - TransparentFX

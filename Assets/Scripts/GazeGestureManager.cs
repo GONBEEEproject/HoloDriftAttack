@@ -115,6 +115,7 @@ public class GazeGestureManager : MonoBehaviour
 
                 break;
         }
+
     }
 
     private float FlagDistance()
