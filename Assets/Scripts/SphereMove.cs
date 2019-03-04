@@ -24,8 +24,17 @@ public class SphereMove :Photon.MonoBehaviour {
         state = PhotonNetwork.Instantiate("StateSphere", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 
+    public void MoveNext()
+    {
+        int x = Mathf.RoundToInt(state.transform.position.x);
+        x++;
+        state.transform.position = new Vector3(x, 0, 0);
+    }
 
-
-
-
+    public void MovePrevious()
+    {
+        int x = Mathf.RoundToInt(state.transform.position.x);
+        x--;
+        state.transform.position = new Vector3(x, 0, 0);
+    }
 }
