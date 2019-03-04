@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Beam
   - StateSphere
+  - Next
+  - Previous
+  - Mother
   layers:
   - Default
   - TransparentFX

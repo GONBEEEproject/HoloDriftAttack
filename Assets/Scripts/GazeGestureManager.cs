@@ -116,6 +116,14 @@ public class GazeGestureManager : MonoBehaviour
                 break;
         }
 
+        if (info.transform.tag == "Next")
+        {
+            SphereMove.Instance.MoveNext();
+        }
+        else if (info.transform.tag == "Previous")
+        {
+            SphereMove.Instance.MovePrevious();
+        }
     }
 
     private float FlagDistance()

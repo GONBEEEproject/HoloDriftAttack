@@ -113,62 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &87344075
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486963859050202, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114318174882938662, guid: 505a106e404dca64a9eb4b3b041ddf54,
-        type: 2}
-      propertyPath: viewIdField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114318174882938662, guid: 505a106e404dca64a9eb4b3b041ddf54,
-        type: 2}
-      propertyPath: instantiationId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302259032185836, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-      propertyPath: m_TagString
-      value: StateSphere
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 505a106e404dca64a9eb4b3b041ddf54, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &371792846
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1690174775
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -580,6 +524,7 @@ GameObject:
   - component: {fileID: 1739073550}
   - component: {fileID: 1739073549}
   - component: {fileID: 1739073548}
+  - component: {fileID: 1739073552}
   m_Layer: 0
   m_Name: SingletonHolder
   m_TagString: Untagged
@@ -696,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  StartFlag: {fileID: 1780704051711982, guid: 262020b6752115a4db5fd4062108df06, type: 2}
+  StartFlag: {fileID: 1836044358728960, guid: 262020b6752115a4db5fd4062108df06, type: 2}
   Marker: {fileID: 1170263865275760, guid: 8084726ef1e422d4d965e6851c166a1c, type: 2}
 --- !u!4 &1739073551
 Transform:
@@ -711,6 +656,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739073552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739073547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0caae14a1ab49054eb1214891d18cefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1797450230
 GameObject:
   m_ObjectHideFlags: 0
