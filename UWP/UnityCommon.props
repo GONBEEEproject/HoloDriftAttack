@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <UnityWSAPlayerDir>D:\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
+        <UnityWSAPlayerDir>D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
         <UnityWSAToolsDir>$(SolutionDir)Unity\Tools\</UnityWSAToolsDir>
     </PropertyGroup>
 </Project>

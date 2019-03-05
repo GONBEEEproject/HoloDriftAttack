@@ -70,7 +70,7 @@ public class SwipeGestureManager : MonoBehaviour
 
             if (moving)
             {
-                SphereMove.Instance.PositionUpdate(dx * 2);
+                SphereMove.Instance.PositionUpdate(dx * 4);
             }
         }
     }

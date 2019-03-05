@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f3caf389-4003-45d0-88ca-4e131ce55b7b</PackageIdentityName>
-    <PackageIdentityPublisher>CN=DefaultCompany</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Exit Games</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -346,31 +346,34 @@
     <AppxPackagedFile Include="C:\Users\GONBEEE_project\.nuget\packages\system.xml.xmlserializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineProxy.dll">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineProxy.dll">
       <PackagePath>UnityEngineProxy.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Unprocessed\WinRTLegacy.dll">
       <PackagePath>WinRTLegacy.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityPlayer.dll">
+    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Unprocessed\Photon3Unity3D.dll">
+      <PackagePath>Photon3Unity3D.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityPlayer.dll">
       <PackagePath>UnityPlayer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\BridgeInterface.dll">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\BridgeInterface.dll">
       <PackagePath>BridgeInterface.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineDelegates.dll">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineDelegates.dll">
       <PackagePath>UnityEngineDelegates.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\BridgeInterface.winmd">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\BridgeInterface.winmd">
       <PackagePath>BridgeInterface.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineDelegates.winmd">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityEngineDelegates.winmd">
       <PackagePath>UnityEngineDelegates.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityPlayer.winmd">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\UnityPlayer.winmd">
       <PackagePath>UnityPlayer.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.1f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\WinRTBridge.winmd">
+    <AppxPackagedFile Include="D:\GONBEEE_project\UnityEngine\Unity2017.4.10f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\dotnet\x86\Debug\WinRTBridge.winmd">
       <PackagePath>WinRTBridge.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Resource.res">
@@ -412,6 +415,9 @@
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\level0">
       <PackagePath>Data\level0</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\level1">
+      <PackagePath>Data\level1</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
     </AppxPackagedFile>
@@ -427,8 +433,17 @@
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\sharedassets1.assets">
+      <PackagePath>Data\sharedassets1.assets</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\level1.resS">
+      <PackagePath>Data\level1.resS</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\resources.assets.resS">
+      <PackagePath>Data\resources.assets.resS</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\managedAssemblies.txt">
       <PackagePath>Data\managedAssemblies.txt</PackagePath>
@@ -436,8 +451,8 @@
     <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\resources.resource">
       <PackagePath>Data\resources.resource</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\sharedassets0.resource">
-      <PackagePath>Data\sharedassets0.resource</PackagePath>
+    <AppxPackagedFile Include="D:\GONBEEE_project\Unity\HoloDriftAttack\UWP\HoloDriftAttack\Data\sharedassets1.resource">
+      <PackagePath>Data\sharedassets1.resource</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
