@@ -8,8 +8,12 @@ public class SwipeGestureManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject handTarget;
+    private MeshRenderer handMesh;
 
     private Vector3 lastPos;
+
+    private float diffX;
+    private bool moving;
 
     // Use this for initialization
     void OnEnable()
@@ -30,9 +34,15 @@ public class SwipeGestureManager : MonoBehaviour
         InteractionManager.InteractionSourceReleased -= SourceReleased;
     }
 
+    private void Start()
+    {
+        handMesh = handTarget.GetComponent<MeshRenderer>();
+        handMesh.enabled = false;
+    }
+
     private void SourceDetected(InteractionSourceDetectedEventArgs obj)
     {
-        handTarget.GetComponent<MeshRenderer>().enabled = true;
+        handMesh.enabled = true;
     }
 
     private void SourceUpdated(InteractionSourceUpdatedEventArgs obj)
@@ -50,7 +60,6 @@ public class SwipeGestureManager : MonoBehaviour
         }
 
         Vector3 handPosition;
-
         if (obj.state.sourcePose.TryGetPosition(out handPosition))
         {
             var diff = handPosition - lastPos;
@@ -58,21 +67,38 @@ public class SwipeGestureManager : MonoBehaviour
 
             float dx = Vector3.Dot(Camera.main.transform.right, diff);
             float dy = Vector3.Dot(Camera.main.transform.up, diff);
+
+            if (moving)
+            {
+                SphereMove.Instance.PositionUpdate(dx);
+            }
         }
-
-
     }
 
     private void SourceLost(InteractionSourceLostEventArgs obj)
     {
-        handTarget.GetComponent<MeshRenderer>().enabled = false;
+        handMesh.enabled = false;
+        MoveEnd();
     }
 
     private void SourcePressed(InteractionSourcePressedEventArgs obj)
     {
+        MoveStart();
     }
 
     private void SourceReleased(InteractionSourceReleasedEventArgs obj)
     {
+        MoveEnd();
     }
+
+    private void MoveStart()
+    {
+        moving = true;
+    }
+
+    private void MoveEnd()
+    {
+        moving = false;
+    }
+
 }
