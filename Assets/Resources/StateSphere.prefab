@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114318174882938662}
   m_Layer: 0
   m_Name: StateSphere
-  m_TagString: Untagged
+  m_TagString: StateSphere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
