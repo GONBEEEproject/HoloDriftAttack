@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SphereReceptor : MonoBehaviour {
 
     private GameObject sphere;
 
     private int pos, oldPos;
+    private float dotTime, dotMax = 0.5f;
+    private int dotCount;
 
     [SerializeField]
     private GameObject[] slides;
+
+    [SerializeField]
+    private Text status;
 
     private void Start()
     {
@@ -26,11 +32,24 @@ public class SphereReceptor : MonoBehaviour {
         {
             sphere = GameObject.FindWithTag("StateSphere");
             Debug.Log("Finding...");
+            dotTime += Time.deltaTime;
+            if (dotTime > dotMax)
+            {
+                dotTime = 0;
+                dotCount++;
+                status.text += ".";
+                if (dotCount > 5)
+                {
+                    dotCount = 0;
+                    status.text = "Searching HoloLens";
+                }
+            }
         }
 
         if (sphere != null)
         {
             CheckState();
+            status.text = "";
         }
     }
 
@@ -54,6 +73,7 @@ public class SphereReceptor : MonoBehaviour {
             slides[Mathf.Abs(page)].SetActive(true);
 
             oldPos = pos;
+            Debug.Log("Changed");
         }
     }
 }
