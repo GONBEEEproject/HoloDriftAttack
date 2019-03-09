@@ -53,11 +53,6 @@ public class LobbyManager : Photon.MonoBehaviour {
         SceneManager.LoadScene("Main");
     }
 
-    private bool CheckText()
-    {
-        return status.text != waitText;
-    }
-
     private IEnumerator TextUpdate()
     {
         if (status.text[0] != waitText[0])
