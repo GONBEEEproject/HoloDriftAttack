@@ -27,20 +27,9 @@ public class SphereMove :Photon.MonoBehaviour {
         state = PhotonNetwork.Instantiate("StateSphere", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 
-    [ContextMenu("MoveNext")]
-    public void MoveNext()
+    private void Update()
     {
-        int x = Mathf.RoundToInt(state.transform.position.x);
-        x++;
-        state.transform.position = new Vector3(x, 0, 0);
-    }
-
-    [ContextMenu("MovePrevious")]
-    public void MovePrevious()
-    {
-        int x = Mathf.RoundToInt(state.transform.position.x);
-        x--;
-        state.transform.position = new Vector3(x, 0, 0);
+        statePos.text = state.transform.position.ToString();
     }
 
     public void PositionUpdate(float movement)
@@ -50,8 +39,10 @@ public class SphereMove :Photon.MonoBehaviour {
         state.transform.position = new Vector3(x + movement, 0, 0);
     }
 
-    private void Update()
+    public void TextColorChange(Color color)
     {
-        statePos.text = state.transform.position.ToString();
+        statePos.color = color;
     }
+
+    
 }

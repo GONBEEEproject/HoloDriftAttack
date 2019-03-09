@@ -43,6 +43,7 @@ public class SwipeGestureManager : MonoBehaviour
     private void SourceDetected(InteractionSourceDetectedEventArgs obj)
     {
         handMesh.enabled = true;
+        SphereMove.Instance.TextColorChange(Color.red);
     }
 
     private void SourceUpdated(InteractionSourceUpdatedEventArgs obj)
@@ -79,16 +80,19 @@ public class SwipeGestureManager : MonoBehaviour
     {
         handMesh.enabled = false;
         MoveEnd();
+        SphereMove.Instance.TextColorChange(Color.white);
     }
 
     private void SourcePressed(InteractionSourcePressedEventArgs obj)
     {
         MoveStart();
+        SphereMove.Instance.TextColorChange(Color.green);
     }
 
     private void SourceReleased(InteractionSourceReleasedEventArgs obj)
     {
         MoveEnd();
+        SphereMove.Instance.TextColorChange(Color.red);
     }
 
     private void MoveStart()
