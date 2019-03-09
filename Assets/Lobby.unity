@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: {fileID: 1121940970}
+  textSpeed: 0.03
 --- !u!4 &1566705883
 Transform:
   m_ObjectHideFlags: 0

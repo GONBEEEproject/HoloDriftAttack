@@ -30,31 +30,18 @@ public class SphereReceptor : MonoBehaviour {
     {
         if (sphere == null)
         {
-            sphere = GameObject.FindWithTag("StateSphere");
-            Debug.Log("Finding...");
-            dotTime += Time.deltaTime;
-            if (dotTime > dotMax)
-            {
-                dotTime = 0;
-                dotCount++;
-                status.text += ".";
-                if (dotCount > 5)
-                {
-                    dotCount = 0;
-                    status.text = "Searching HoloLens";
-                }
-            }
+            FindState();
         }
-
-        if (sphere != null)
+        else
         {
             CheckState();
-            status.text = "";
         }
     }
 
     private void CheckState()
     {
+        status.text = "";
+
         if (slides.Length == 0) return;
 
         pos = Mathf.RoundToInt(sphere.transform.position.x);
@@ -63,7 +50,7 @@ public class SphereReceptor : MonoBehaviour {
         {
             int page = pos % slides.Length;
 
-            for(int i = 0; i < slides.Length; i++)
+            for (int i = 0; i < slides.Length; i++)
             {
                 if (slides[i] == null) return;
 
@@ -74,6 +61,24 @@ public class SphereReceptor : MonoBehaviour {
 
             oldPos = pos;
             Debug.Log("Changed");
+        }
+    }
+
+    private void FindState()
+    {
+        sphere = GameObject.FindWithTag("StateSphere");
+        //Debug.Log("Finding...");
+        dotTime += Time.deltaTime;
+        if (dotTime > dotMax)
+        {
+            dotTime = 0;
+            dotCount++;
+            status.text += ".";
+            if (dotCount > 5)
+            {
+                dotCount = 0;
+                status.text = "Searching HoloLens";
+            }
         }
     }
 }
