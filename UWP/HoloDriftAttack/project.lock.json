@@ -15992,20 +15992,25 @@
     "UAP,Version=v10.0.10240": []
   },
   "packageFolders": {
-    "C:\\Users\\GONBEEE_project\\.nuget\\packages\\": {}
+    "C:\\Users\\gonbe\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\GONBEEE_project\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\HoloDriftAttack.csproj",
+      "projectUniqueName": "D:\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\HoloDriftAttack.csproj",
       "projectName": "HoloDriftAttack",
-      "projectPath": "D:\\GONBEEE_project\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\HoloDriftAttack.csproj",
-      "projectJsonPath": "D:\\GONBEEE_project\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\project.json",
-      "packagesPath": "C:\\Users\\GONBEEE_project\\.nuget\\packages\\",
-      "outputPath": "D:\\GONBEEE_project\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\obj\\",
+      "projectPath": "D:\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\HoloDriftAttack.csproj",
+      "projectJsonPath": "D:\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\project.json",
+      "packagesPath": "C:\\Users\\gonbe\\.nuget\\packages\\",
+      "outputPath": "D:\\Unity\\HoloDriftAttack\\UWP\\HoloDriftAttack\\obj\\",
       "projectStyle": "ProjectJson",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\GONBEEE_project\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\gonbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
